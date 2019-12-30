@@ -1,0 +1,51 @@
+#include<iostream>
+
+using namespace std;
+
+int price1(int);
+int price2(int);
+
+int price1(int rank2017){
+		if(rank2017==1)
+			return 5000000;
+		else if(rank2017>=2 && rank2017 <=3)
+			return 3000000;
+		else if(rank2017>=4 && rank2017 <=6)
+			return 2000000;
+		else if(rank2017>=7 && rank2017 <=10)
+			return 500000;
+		else if(rank2017>=11 && rank2017 <=15)
+			return 300000;
+		else if(rank2017>=16 && rank2017 <=21)
+			return 100000;
+		else
+			return 0;
+}
+
+int price2(int rank2018){
+	    if(rank2018==1)
+			return 5120000;
+		else if(rank2018>=2 && rank2018 <=3)
+			return 2560000;
+		else if(rank2018 >=4 && rank2018 <=7)
+			return 1280000;
+		else if(rank2018 >=8 && rank2018 <=15)
+			return 640000;
+		else if(rank2018 >=16 && rank2018 <=31)
+			return 320000;
+		else
+			return 0;
+}
+
+int main(){
+	int num, rank2017, rank2018, total2017, total2018;
+	cin >> num;
+	
+	for(int i = 0; i < num; i ++){
+	cin >> rank2017 >> rank2018;
+	total2017 = price1(rank2017);
+	total2018 = price2(rank2018);
+	cout << total2017 + total2018 << endl;
+	}
+	return 0;
+}
